@@ -60,6 +60,7 @@ export default {
                 fastClick.attach(document.body)
             })
             this.cache_init()
+          console.log("31231");
         },
         cache_init() {
             this.get_historyArticle_cache()
