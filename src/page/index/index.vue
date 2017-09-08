@@ -75,7 +75,6 @@
     created() {
 //      this.cordova_updateInstalled();
       this.appShow = true
-      console.log('aaaaa');
     },
     mounted() {
       document.addEventListener('deviceready', () => {
