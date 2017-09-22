@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <transition  :name='transitionName'>
+        <transition :name='transitionName'>
             <keep-alive exclude='detail'>
                 <router-view class='child-view'></router-view>
             </keep-alive>
@@ -19,11 +19,12 @@ export default {
             transitionName: ''
         }
     },
-//    beforeRouteEnter(to, from, next) {
-//        document.addEventListener('deviceready', () => {
 //          next()
-//        }, false)
-//    },
+    beforeRouteEnter(to, from, next) {
+        document.addEventListener('deviceready', () => {
+          next()
+        }, false)
+    },
     beforeRouteUpdate (to, from, next) {
         let isBack = this.$router.isBack
         if (isBack) {

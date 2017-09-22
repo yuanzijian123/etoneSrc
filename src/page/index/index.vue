@@ -11,6 +11,7 @@
         <nav-bar></nav-bar>
       </template>
 
+
       <div class="coverAd" v-if="!sendMsgDisabled">
         <img class="coverOne" :src="coverData" v-if="coverImg"/>
         <img src="../../assets/icon/1.png">
@@ -48,6 +49,7 @@
       ]),
       stopSend() {
         this.sendMsgDisabled = true
+        this.appShow = true
       },
       send() {
         var me = this
@@ -73,8 +75,7 @@
       }
     },
     created() {
-//      this.cordova_updateInstalled();
-      this.appShow = true
+      this.cordova_updateInstalled();
     },
     mounted() {
       document.addEventListener('deviceready', () => {

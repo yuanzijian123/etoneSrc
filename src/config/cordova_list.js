@@ -53,7 +53,7 @@ export const device_uuid = () => {
 // 热更新
 export const updateInstalled = () => {
   document.addEventListener('chcp_updateInstalled', function() {
-    alert('更新完成')
+    // alert('更新完成')
   }, false)
 }
 
